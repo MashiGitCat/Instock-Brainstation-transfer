@@ -1,0 +1,57 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.nav{
+    padding: 1.5rem 1rem 0 1rem;
+    height: 12.5rem;
+    background-color: $graphite;
+    @include flex-box(column);
+    align-items: center;
+
+    @include tablet{
+        width: 100%;
+        padding: 2rem 1rem 2rem 2rem; 
+        @include flex-box(row);
+        height: 11.625rem;
+        align-items: flex-start;
+    }
+
+    @include desktop{
+        padding: 2rem 7.125rem 2rem 8.125rem;  
+    }
+
+    &__links{
+        width: 100%;
+        height: auto;
+        padding-top: 1.5rem;
+        @include flex-box(row);
+        justify-content: space-between;
+
+        @include tablet{
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        &-wrap{
+        @include mobile-labelLinkButton;
+        padding: 0.5rem 2rem;
+        width: 10rem;
+        text-align: center;
+        color: $cloud;
+
+        @include tablet{
+            width: 8rem;
+            @include desktab-labelLinkButton;
+            margin-left: 1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        }
+        &-wrap:hover{
+            background-color: $black;
+            border-radius: 1.25rem;
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+}

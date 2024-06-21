@@ -1,0 +1,91 @@
+@use './variables' as *;
+@use './typography' as *;
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin flex-box($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin mobile-pageHeader {
+
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+}
+
+@mixin desktab-pageHeader {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+@mixin mobile-subheader {
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+@mixin desktab-subheader {
+    font-size: 1.625rem;
+    line-height: 2rem;
+}
+
+@mixin mobile-labelLinkButton {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+}
+
+@mixin desktab-labelLinkButton {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+}
+
+@mixin mobile-tableHeader {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+}
+
+@mixin desktab-tableHeader {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}
+
+@mixin mobile-bodyLarge {
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+}
+
+@mixin desktab-bodyLarge {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+@mixin mobile-bodyMedium {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+}
+
+@mixin dasktab-bodyMedium {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+}
+
+@mixin mobile-bodySmall {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+}
+
+@mixin desktab-bodySmall {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+}

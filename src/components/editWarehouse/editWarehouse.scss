@@ -1,0 +1,203 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/_variables" as *;
+
+
+* {
+    font-family: "Titillium Web";
+    font-weight: bold;
+}
+
+.edit-warehouse {
+    background-color: $cloud;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    box-shadow: 2px 4px 6px $light-grey;
+}
+
+.edit-warehouse__section {
+    &--top {
+        width: 100%;
+        border-bottom: 1px solid $cloud;
+        @include tablet{
+            width: 47%;
+        padding-right: 2rem;
+        border-bottom: none;
+        }
+    }
+
+    &--bottom {
+        width: 100%;
+        @include tablet{
+            width: 47%;
+            padding-left: 2rem;
+            border-left: 1px solid $cloud;  
+        }
+    }
+}
+
+.edit-warehouse__container {
+
+    background-color: $white;
+    border-radius: 4px;
+    margin-top: -4rem;
+
+    @include tablet {
+        margin-top: -5rem;
+    }
+
+    @include desktop {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+}
+
+.edit-warehouse__form {
+     @include tablet{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.edit-warehouse__display {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+    }
+
+
+    &--details {
+        @include tablet {
+            margin-left: 1rem;
+            width: 100%
+        }
+    }
+
+    &--contact {
+        @include tablet {
+            margin-right: 1rem;
+            width: 100%;
+            border-left: 1px solid $cloud;
+        }
+    }
+}
+
+.edit-warehouse__title {
+    @include mobile-pageHeader;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid $cloud;
+
+    @include tablet {
+        @include desktab-pageHeader;
+        padding-left: 1rem;
+        border-bottom: 1px solid $cloud;
+    }
+
+
+    &--button {
+        height: 24px;
+        padding: 0 0.5rem 0 1rem;
+    }
+
+    &--text {
+        @include mobile-pageHeader;
+
+        @include tablet {
+            @include desktab-pageHeader
+        }
+    }
+
+}
+
+.edit-warehouse__subtitle {
+    @include mobile-subheader;
+    padding: 1rem 1rem;
+
+    @include tablet {
+        @include desktab-subheader;
+        border-top: none;
+    }
+}
+
+.edit-warehouse__details {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.edit-warehouse__input {
+
+    padding-bottom: 1rem;
+
+    &--title {
+        @include mobile-labelLinkButton;
+
+        @include tablet {
+            @include desktab-labelLinkButton
+        }
+    }
+
+    &--text {
+        @include mobile-bodyMedium;
+        border-radius: 20px;
+        font-weight: 400;
+        padding-left: 1rem;
+        width: 100%;
+        height: 2rem;
+        border: 1px solid $cloud;
+
+        @include tablet {
+            @include mobile-bodyMedium
+        }
+    }
+}
+
+.edit-warehouse__button {
+    &-container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+            padding-right: 2rem;
+        }
+    }
+
+    &--cancel {
+        background-color: $white;
+        width: 8rem;
+        border-radius: 20px;
+        border: 1px solid $cloud;
+        color: $slate;
+        height: 2rem;
+        @include mobile-labelLinkButton;
+
+        @include tablet {
+            @include desktab-labelLinkButton;
+            width: 4rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &--add {
+        background-color: $indigo;
+        width: 8rem;
+        border-radius: 20px;
+        border: 1px solid $indigo;
+        color: $white;
+        height: 2rem;
+        @include mobile-labelLinkButton;
+
+        @include tablet {
+            @include desktab-labelLinkButton
+        }
+    }
+
+}

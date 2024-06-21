@@ -1,0 +1,196 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/_variables" as *;
+
+
+* {
+    font-family: "Titillium Web";
+    font-weight: 600;
+}
+
+.warehouse-details {
+	
+	background-color: $white;
+	padding: 0.5rem 0.5rem 0 0.5rem;
+	box-shadow: 2px 4px 6px $light-grey;
+
+
+	&__container {
+		background-color: $white;
+		border-radius: 4px;
+		margin-top: -4rem;
+		border-bottom-left-radius: 0;
+        border-bottom-right-radius:0;
+		
+	}
+	&__header{
+		display:flex;
+		align-items: center;
+	}
+
+	&__title {
+		@include mobile-pageHeader;
+		color: $black;
+
+		@include tablet{
+			@include desktab-pageHeader;
+			padding-left: 1rem;
+		}
+	}
+
+	&__edit {
+		background-color: $indigo;
+		@include mobile-pageHeader;
+		padding:0.5rem;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		line-height: 1.5rem;
+
+
+
+		@include tablet{
+			display: none;
+		}
+
+
+		&--logo{
+			fill: $white;
+			color: $white;
+			color:invert($color: #ffffff)
+		}
+	}
+
+	&__contact{
+		
+		&-info{
+		display:flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	&-wrapper{
+		@include tablet{
+			display:flex;
+			width:90%;
+			margin-top:1rem;
+		}
+	}
+	}
+
+	&__tablet{
+		display: none;
+
+		@include tablet {
+			@include desktab-labelLinkButton;
+			display:flex;
+			align-items: center;
+			color: $white;
+			background-color: $indigo;
+			border-radius: 20px;
+			width: 5rem;
+			font-weight: 400;
+			padding-left: 1rem;
+		}
+	}
+
+	
+	&__person-info{
+		width:8.75rem;
+		height:2.5rem; 
+	}
+
+	&__contacts{
+		width:50%;
+
+		@include tablet{
+			width: 100%;
+			margin-left:3rem;
+			padding-right: 5rem;
+			
+		}
+
+	&--info{
+
+		@include tablet {
+			margin-left: 2rem
+		}
+		
+		@include desktop {
+			padding-left: 10rem;
+		}
+	
+	}
+
+	}
+
+	&__contacts-container{
+		padding-bottom: 1rem;
+
+	}
+
+	&__headings  {
+		@include mobile-bodySmall;
+		text-transform: uppercase;
+		margin-bottom:0.5rem;
+		color: $slate;
+
+		@include tablet{
+			@include desktab-bodySmall
+		}
+	}
+
+	&__align {
+		display: flex;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+		justify-content: space-between;
+	}
+	&__text {
+		@include mobile-bodyMedium;
+		font-family: "Titillium Web";
+		font-weight: 400;
+		color:$black;
+
+		@include tablet{
+			@include dasktab-bodyMedium;
+			width: 10rem;
+		}
+			
+		}
+
+	&__address{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+        
+		@include tablet{
+			display:flex;
+			flex-direction: column;
+			width: 50%;
+			padding-right: 0%;
+			border-right: 1px solid $cloud;
+		
+		}
+
+		@include desktop {
+			width: 40%
+		}
+	}
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+
+		&-wrapper{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border-bottom: 1px solid $cloud;
+		}
+
+	}
+}
+

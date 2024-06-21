@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Titillium Web";
+  src: url(../../assets/fonts/TitilliumWeb-Regular.ttf) format(truetype);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url(../../assets/fonts/TitilliumWeb-SemiBold.ttf) format(truetype);
+  font-weight: 600;
+}
+.footer {
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 2rem;
+  border-color: #BDC5D5;
+}
+@media (min-width: 768px) {
+  .footer {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    bottom: 3rem;
+  }
+}/*# sourceMappingURL=footer.css.map */

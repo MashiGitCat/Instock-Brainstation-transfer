@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer{
+    background-color: $white;
+    text-align: center;
+    padding: 2rem;
+    border-color: $cloud;
+
+    @include tablet{
+        @include desktab-bodySmall;
+    }
+    @include desktop{
+        bottom: 3rem;
+    }
+}
